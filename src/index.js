@@ -3,7 +3,7 @@ addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 const routes = {
-  "${workername}.${username}.workers.dev/": "https://registry-1.docker.io",
+  "cfdp.styleonly.workers.dev/": "https://registry-1.docker.io",
 };
 /*
 const dockerHub = "https://registry-1.docker.io";
