@@ -2,7 +2,10 @@ addEventListener("fetch", (event) => {
   event.passThroughOnException();
   event.respondWith(handleRequest(event.request));
 });
-
+const routes = {
+  "${workername}.${username}.workers.dev/": "https://registry-1.docker.io",
+};
+/*
 const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
@@ -18,7 +21,7 @@ const routes = {
   // staging
   "docker-staging.libcuda.so": dockerHub,
 };
-
+*/
 function routeByHosts(host) {
   if (host in routes) {
     return routes[host];
